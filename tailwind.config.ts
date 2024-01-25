@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic": 
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -72,6 +77,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+     
     },
   },
   plugins: [require("tailwindcss-animate")],
