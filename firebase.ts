@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 import { getFunctions } from "firebase/functions";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCH0Qs5Dtg0voz1jMcQaYCdRLQ_UQpWzHo",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "next-chat-f28e0.firebaseapp.com",
   projectId: "next-chat-f28e0",
   storageBucket: "next-chat-f28e0.appspot.com",
