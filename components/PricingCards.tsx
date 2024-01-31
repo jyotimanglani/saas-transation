@@ -5,7 +5,7 @@ import Link from "next/link";
 const tiers = [
   {
     name: "Starter",
-    id: "starter_id",
+    id: undefined,
     href: "#",
     priceMonthly: null,
     description: "Get chatting right away with anyone, anywhere!",

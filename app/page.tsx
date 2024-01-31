@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import DemoGif from "../images/landingPage/DemoGif.gif";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/auth";
+
 
 export default function Home() {
   return (
