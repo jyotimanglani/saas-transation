@@ -14,16 +14,20 @@ function SubscriptionProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (!session?.user?.id) return;
+
     return onSnapshot(
       subscriptionRef(session?.user?.id),
       (snapshot) => {
+        console.log("Raw Firestore Data:", snapshot.docs[0]?.data());
         if (snapshot.empty) {
           console.log("user has NO subscription");
           // set no subscription
           setSubscription(null);
         } else {
-          console.log("user has subscription");
+          // console.log("user has subscription");
+          // console.log("Raw Firestore Data:", snapshot.docs[0]?.data());
           setSubscription(snapshot.docs[0].data());
+          // console.log("Raw Firestore Data:", snapshot.docs[0]?.data());
         }
       },
       (error) => {
