@@ -30,10 +30,6 @@ const LanguageSelect = () => {
     subscription?.role === "pro" && subscription?.status === "active";
   const pathName = usePathname();
   const isChatPage = pathName.includes("/chat");
-  //   console.log("language", language, setLanguage);
-  //   useEffect(() => {
-  //     console.log("selected", language);
-  //   }, [language]);
 
   return (
     isChatPage && (

@@ -18,8 +18,6 @@ async function Header() {
         <Logo />
 
         <div className="flex-1 flex items-center justify-end space-x-4">
-          {/* languageSelect */}
-
           <LanguageSelect />
 
           {session ? (
@@ -36,7 +34,6 @@ async function Header() {
           <UserButton session={session} />
         </div>
       </nav>
-      {/* upgrade banner */}
       <UpgradeBanner />
     </header>
   );

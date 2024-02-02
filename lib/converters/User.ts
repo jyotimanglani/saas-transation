@@ -1,6 +1,3 @@
-// Convertor are responsible for how we push and pull data in our database
-// so in this case for subscription wee push data to firestore
-
 import { db } from "@/firebase";
 import {
   DocumentData,
@@ -20,7 +17,6 @@ export interface User {
 }
 
 const userConvertor: FirestoreDataConverter<User> = {
-  // when we push data to the firestore well'l push it in the form of a subscription
   toFirestore: (user: User): DocumentData => {
     return {
       email: user.email,
@@ -28,7 +24,7 @@ const userConvertor: FirestoreDataConverter<User> = {
       image: user.image,
     };
   },
-  // the that we expect to pull out from db
+
   fromFirestore: (
     snapshot: QueryDocumentSnapshot,
     options: SnapshotOptions
