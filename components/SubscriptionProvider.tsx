@@ -18,9 +18,9 @@ function SubscriptionProvider({ children }: { children: React.ReactNode }) {
     return onSnapshot(
       subscriptionRef(session?.user?.id),
       (snapshot) => {
-        console.log("Raw Firestore Data:", snapshot.docs[0]?.data());
+        // console.log("Raw Firestore Data:", snapshot.docs[0]?.data());
         if (snapshot.empty) {
-          console.log("user has NO subscription");
+          // console.log("user has NO subscription");
           // set no subscription
           setSubscription(null);
         } else {

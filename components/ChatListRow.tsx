@@ -17,7 +17,7 @@ function ChatListRow({ chatId }: { chatId: string }) {
     limitedSortedMessagesRef(chatId)
   );
 
-  console.log("messages", messages);
+  // console.log("messages", messages);
 //   const lastMessage = messages?.[0];
 
   function prettyUUID(n = 4) {

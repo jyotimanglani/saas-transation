@@ -1,4 +1,3 @@
-
 import { getApp, getApps, initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
@@ -10,7 +9,7 @@ const firebaseConfig = {
   projectId: "next-chat-f28e0",
   storageBucket: "next-chat-f28e0.appspot.com",
   messagingSenderId: "255805564613",
-  appId: "1:255805564613:web:6cc26861f96494f71ef2ac"
+  appId: "1:255805564613:web:6cc26861f96494f71ef2ac",
 };
 
 // Initialize Firebase

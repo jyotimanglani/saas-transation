@@ -3,6 +3,7 @@ import AdminControls from "@/components/AdminControls";
 import ChatInput from "@/components/ChatInput";
 import ChatMembersBadges from "@/components/ChatMembersBadges";
 import ChatMessages from "@/components/ChatMessages";
+import { chatMembersRef } from "@/lib/converters/ChatMembers";
 import { sortedMessageRef } from "@/lib/converters/Messages";
 import { getDocs } from "firebase/firestore";
 
@@ -22,7 +23,7 @@ async function ChatPage({ params: { chatId } }: Props) {
     (doc) => doc.data()
   );
 
-  const hasAccess = (await getDocs(sortedMessageRef(chatId))).docs
+  const hasAccess = (await getDocs(chatMembersRef(chatId))).docs
     .map((doc) => doc.id)
     .includes(session?.user.id!);
 
@@ -45,6 +46,7 @@ async function ChatPage({ params: { chatId } }: Props) {
       </div>
 
       <ChatInput chatId={chatId} />
+      {console.log("user id : ", session?.user.id!)}
     </>
   );
 }
